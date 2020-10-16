@@ -1,5 +1,5 @@
 {
-    "name": "hcm-admin",
+    "name": "hcm-push-server",
     "version": "0.0.1",
     "description": "HCM Node SDK.",
     "main": "./dist/index.js",
