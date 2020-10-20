@@ -1,7 +1,7 @@
 {
-    "name": "hcm-push-server",
+    "name": "hcm-node",
     "version": "0.0.1",
-    "description": "HCM Node SDK.",
+    "description": "HCM (Huawei Cloud Messaging) Node SDK.",
     "main": "./dist/index.js",
     "scripts": {
         "tsc": "tsc -w",
