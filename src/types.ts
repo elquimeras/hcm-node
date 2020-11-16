@@ -1,4 +1,4 @@
-export interface HcmServiceNamespace<T> {
+export interface HcmService<T> {
   [key: string]: T;
 }
 

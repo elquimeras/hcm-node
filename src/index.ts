@@ -3,9 +3,9 @@ import { Topic } from './push/topic';
 import { MessagingConfig } from './push/modle/message';
 import { TopicConfig } from './push/modle/topic';
 import { AuthClient } from './auth/auth';
-import { HcmConfig, HcmServiceNamespace } from './types';
+import { HcmConfig, HcmService } from './types';
 
-export class HcmNamespace {
+export default class HcmNode {
   private authClient: AuthClient;
   private config: HcmConfig;
 
@@ -22,7 +22,7 @@ export class HcmNamespace {
     return token;
   }
 
-  public messaging(conf?: MessagingConfig): HcmServiceNamespace<Messaging> {
+  public messaging(conf?: MessagingConfig): HcmService<Messaging> {
     if (!this.checkInit()) {
       return;
     }
@@ -40,7 +40,7 @@ export class HcmNamespace {
     return { messaging };
   }
 
-  public topic(tconf?: TopicConfig): HcmServiceNamespace<Topic> {
+  public topic(tconf?: TopicConfig): HcmService<Topic> {
     if (!this.checkInit()) {
       return;
     }

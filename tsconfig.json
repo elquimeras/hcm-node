@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "es6",
     "module": "commonjs",
+    "rootDir": "src",
     "outDir": "dist",
     "sourceMap": true,
     "declaration": true,
@@ -10,14 +11,9 @@
     "emitDecoratorMetadata": true,
     "esModuleInterop": true,
     "newLine": "lf",
-    "types": [
-      "node"
-    ]
+    "types": ["node"]
   },
-  "files": [
-    // "./node_modules/@types/mocha/index.d.ts",
-    "./node_modules/@types/node/index.d.ts"
-  ],
-  "include": ["src/**/*.ts", "index.ts"],
+  "files": ["./node_modules/@types/node/index.d.ts"],
+  "include": ["src/**/*.ts"],
   "exclude": ["./node_modules", "./dist"]
 }
