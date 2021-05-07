@@ -47,3 +47,19 @@ function throwError(detail: any): void {
 }
 
 ```
+
+## Configuration
+
+| Initialization Parameter | Description                                                                                                   |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------- |
+| AppId                    | App ID, which is obtained from app information.                                                               |
+| AppSecret                | Secret access key of an app, which is obtained from app information.                                          |
+| AuthUrl                  | URL for the Huawei OAuth 2.0 service to obtain a token, please refer to Generating an App-Level Access Token. |
+| PushUrl                  | URL for accessing HUAWEI Push Kit, please refer to Sending Messages.                                          |
+
+| Request Parameter | Description                                                         |
+| ----------------- | ------------------------------------------------------------------- |
+| TargetTopic       | Name of a topic to be subscribed to, unsubscribed from, or queried. |
+| TargetCondition   | Combination of condition expressions for a message.                 |
+| TargetToken       | Token of a destination device.                                      |
+| TargetTokenArray  | Tokens of destination devices.                                      |
