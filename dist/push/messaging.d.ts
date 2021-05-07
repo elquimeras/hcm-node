@@ -13,10 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-import { HcmNamespace } from "./src/hcm-namespace";
-
-const hcmAdmin = new HcmNamespace();
-(hcmAdmin as any).default = hcmAdmin;
-
-export = hcmAdmin;
+import { MessagingConfig, Message, MsgResponse } from "./modle/message";
+import { AuthClient } from "../auth/auth";
+export declare class Messaging {
+    private config;
+    private authClient;
+    private _httpClient;
+    constructor(conf: MessagingConfig, auth: AuthClient);
+    send(message: Message, validationOnly?: boolean, dryRun?: boolean): Promise<MsgResponse>;
+    private sendRequest;
+}
+//# sourceMappingURL=messaging.d.ts.map
